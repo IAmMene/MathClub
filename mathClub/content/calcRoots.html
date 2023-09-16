@@ -1,0 +1,90 @@
+<!--
+File name: calcRoots.html
+Author: Julian Menegon
+Program: Software Development and Network Engineering
+Date: 06/26/2
+Version: 	1.0
+Description: This webpage is used to recieve user input for the quadratic function and display the JS logic behind the scenes. 
+Citation: 
+    https://www.freecodecamp.org/news/basic-html5-template-boilerplate-code-example/ 
+    This page follows basic HTML structure and functionality.
+    For full understanding and citation on why the HTML document is structured as below, refer back to the index.html of this folder. Repeat comments will be avoided. 
+    Only those features that differ from the index.html file will be commented on in this file. For example, the head, and header elements containing nav etc., are the exact same for each page and therefore will not be commented on throughout.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Quadratic Equation Roots</title>
+  <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+  <link rel="stylesheet" href="../css/main.css"> 
+  <!-- more information see https://missing.style/ -->
+</head>
+<body>
+  <header> 
+    <h1>Quadratic Equation Roots</h1>
+    <nav>
+      <p class="tool-bar">
+        <a href="../index.html">Home</a>
+        <a href="../content/add2nums.html">Add 2 Numbers</a>
+        <a href="../content/guessNum.html">Guess Number Game</a>
+        <a href="../content/covertTem.html">Temperature Conversion</a>
+        <a href="../content/calcRoots.html" class="current">Quadratic Equation Solver</a>
+        <a href="../content/calcAreaCirlce.html">Area of a Circle Calculation</a>
+        <a href="../content/calFibonacci.html">Fibonacci Equation</a>
+      </p>
+    </nav>
+  </header>
+  <main>
+     <!-- Section element was again used in this section because of the external CSS stylesheet that was references, a dedicated and distinct box surrounding the input was the desire and therefore the section element was used again much like in the guessNum.html. 
+      The form element was used to represent a document section containing interactive controls for submitting information. 
+      Form id is set quadraticForm in order to set a unique id to the form to be accessed by js.
+      The label and input element both serve to create a label and input field respectively. THe labels have been set to a, b, and c for the respective required inputs. 
+      Then I set the input type as a number as it is required, and the required attribute is entered to ensure that the correct field is entered before submitting the form. 
+      The same logic is applied to the input for the second input box as well as the third.
+      Finally, a submitt button is created within the form following a similar format to the other input boxes.
+      It acts as a submit button which is a button for submiting the form data to a form handler, which will be handlded by the JS. 
+      Citation: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
+      https://www.w3schools.com/tags/att_input_required.asp 
+      https://www.w3schools.com/html/html_forms.asp 
+      https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section
+      https://missing.style/docs/components/#section-permalinks 
+    -->
+    <section class="box">
+      <h2>Quadratic Equation Solver</h2>
+      <form id="quadraticForm">
+        <label for="a">Coefficient a:</label>
+        <input type="number" id="a" required>
+      
+        <label for="b">Coefficient b:</label>
+        <input type="number" id="b" required>
+      
+        <label for="c">Coefficient c:</label>
+        <input type="number" id="c" required>
+      
+        <button type="submit">Calculate Roots</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- An additional result section has been created to make the portions of the input and output more distinguishable. -->
+  <section class="box" id="result">
+    <h2>Result</h2>
+    <p id="roots"></p>
+  </section>
+
+  <script src="../js/calcRoots.js"></script>
+  <!-- The footer element is used to contain the authorship information, copyright information, contact info etc.
+    The original code and the reference to the git was done above, the below footer was created and used from that code.
+    The address element is used to show that the information within it provides contact information the organization. 
+    the &copy is used to create a copyright sign. 
+    Citation: https://www.w3schools.com/tags/tag_footer.asp
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address 
+    https://www.w3schools.com/html/html_symbols.asp
+  -->
+  <footer>
+    <address>SYST10199 Web Development &copy; Sheridan College</address>
+    <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+  </footer>
+</body>
+</html>

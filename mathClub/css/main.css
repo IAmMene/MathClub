@@ -1,0 +1,14 @@
+/* This styling was obtained from https://github.com/ebajcar/web10199/blob/master/content_summer2023/worksheets/material/template_s2023.html 
+It is used to change the <html> element font as well as styling to bold the page that we are on in the navigation element on each HTML page. 
+Citation: https://developer.mozilla.org/en-US/docs/Web/CSS/:root
+https://developer.mozilla.org/en-US/docs/Web/CSS/:current 
+*/
+:root {
+    --main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+    --line-length: 60rem; /* Maximum line length for prose. */
+  }
+  .current {
+    font-weight: bold;
+  }
+
+  

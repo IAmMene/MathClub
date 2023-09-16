@@ -1,0 +1,88 @@
+<!--
+File name: add2nums.html
+Author: Julian Menegon
+Program: Software Development and Network Engineering
+Date: 06/26/2
+Version: 	1.0
+Description: This webpage is used to allow for users to enter two numbers, in a fieldbox, those numbers will be added and displayed on the webpage.
+            This webpage will be used to request user input and output the answer. JS will be used to perform the logic of the math. 
+Citation: 
+    https://www.freecodecamp.org/news/basic-html5-template-boilerplate-code-example/ 
+    This page follows basic HTML structure and functionality.
+    For full understanding and citation on why the document is structured as below, refer back to the index.html of this folder. Repeat comments will be avoided. 
+    Only those features that differ from the index.html file will be commented on in this file. For example, the head, and header elements containing nav etc., are the exact same for each page and therefore will not be commented on throughout.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>AddingTwoNumbers</title>   
+  <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+  <link rel="stylesheet" href="../css/main.css"> 
+<!-- more information see https://missing.style/ -->
+</head>
+<body>
+  <header>
+    <h1>Add Two Numbers</h1>
+    <nav>
+      <p class="tool-bar">
+        <a href="../index.html">Home</a>
+        <a href="../content/add2nums.html" class="current">Add 2 Numbers</a>
+        <a href="../content/guessNum.html">Guess Number Game</a>
+        <a href="../content/covertTem.html">Temperature Conversion</a>
+        <a href="../content/calcRoots.html">Quadratic Equation Solver</a>
+        <a href="../content/calcAreaCirlce.html">Area of a Circle Calculation</a>
+        <a href="../content/calFibonacci.html">Fibonacci Equation</a>
+      </p>
+    </nav>
+  </header>
+  <!-- Main element is used in order to help distinguish the different parts of the webpage from one another such as the Navigation header and the main text-->
+  <main>
+    <!-- The form element was used to represent a document section containing interactive controls for submitting information. 
+      Form id is set to addNumbers in order to set a unique id to the form.
+      The label and input element both serve to create a label and input field respectively. I have set the label to number1 to indicate that the user is to enter their first value.
+      Then I set the input type as a number as it is required, and the required attribute is entered to ensure that the correct field is entered before submitting the form. 
+      The break element is used in order to produce a break line in the text so that the two inputs and labels are differentiated by some white space on the webpage. 
+      The same logic is applied to the input for the second input box. 
+      Finally, a submitt button is created within the form following a similar format to the other input boxes.
+      It acts as a submit button which is a button for submiting the form data to a form handler, which will be handlded by the JS. 
+      Citation: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
+      https://www.w3schools.com/tags/att_input_required.asp 
+      https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br 
+      https://www.w3schools.com/html/html_forms.asp 
+    -->
+    <form id="addNumbersForm">
+      <label for="number1">Number 1:</label>
+      <input type="number" id="number1" required><br><br>
+    
+      <label for="number2">Number 2:</label>
+      <input type="number" id="number2" required><br><br>
+    
+      <input type="submit" value="Add">
+    
+      <!-- Once the form's data has been dealt with by the JS, a paragraph element is used to display the output of the JS once it has been calculated, nothing will be present on screen until 2 numbers have been inputed and the add button/submitt button pressed. 
+        The p element is being used as a way to represent a block of text, and will be given the p element has been set to an id of result, the content of the p element will be dynamically updated by JS when the form is submitted. 
+        Citation: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p
+      -->
+      <p id="result"></p>
+    </form>
+  <!-- The script element is used to embed executable code or data; specifically it is referencing the JS that is being used to add the 2 numbers together. 
+    Citation: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
+  -->
+  <script src="../js/add2nums.js"></script>
+  </main>
+  <!-- The footer element is used to contain the authorship information, copyright information, contact info etc.
+    The original code and the reference to the git was done above, the below footer was created and used from that code.
+    The address element is used to show that the information within it provides contact information the organization. 
+    the &copy is used to create a copyright sign. 
+    Citation: https://www.w3schools.com/tags/tag_footer.asp
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address 
+    https://www.w3schools.com/html/html_symbols.asp
+  -->
+  <footer>
+    <address>SYST10199 Web Development &copy; Sheridan College</address>
+    <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+  </footer>
+</body>
+</html>

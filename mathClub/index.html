@@ -1,0 +1,96 @@
+<!--
+File name: index.html
+Author: Julian Menegon
+Program: Software Development and Network Engineering
+Date: 06/26/2
+Version: 	1.0
+Description: 	Deploy a webpage titled Math Club that travels to different web pages doing different mathematical calculations and play games. 
+          Each HTML page will have styling with CSS and the mathematical functions done in JS and linked to by external sheets. 
+          The index page, or main page, will serve as the terminal to reach every other page.
+Citation: 
+    https://www.freecodecamp.org/news/basic-html5-template-boilerplate-code-example/ 
+    This page follows basic HTML structure and functionality. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MathClub</title>
+  <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+  <link rel="stylesheet" href="../mathClub/css/main.css">
+</head>
+<!-- For the above code that falls under the root and head elements, this is the beginning of the basic structure of HTML5 and all other webpages will be based on this structure. Those features that are described here will not be reiterated in other HTML files, only those features that differentiate from this document will be made note of. 
+  html tag is the beginning of the HTML file with a nested head and body element. The lang attribute it called here as this allows for greater accessibility, screen readers can actually read the text on page correctly with this set with a clear language. 
+  Head element is used for code that is to be processed by a machine, metadata describes what info is on the page. 
+  UTF-8 is the character encoding on a web page while hte viewport is used to render the width of the page on the screen of a device. 
+  The title element is used to title the webpage and I have set this to the MathClub as per instructions. 
+  link element are used to link the 2 different style sheets to the html document, the rel="stylesheet" shows the relationship betweent he HTML file and the external stylesheet. 
+  href is used to reference the https://missing.style/ style sheet, this was used as the template for the HTML so that the outline as well as the SC could be completed. 
+  href also references the local CSS file. 
+  Citation: https://www.freecodecamp.org/news/basic-html5-template-boilerplate-code-example/
+-->
+<!--The below code also follows the standard structure of HTML with the body element containing the document's body with information such as headings, paragraphs, navigation etc. 
+  The header element is used to introduce content such as navigational aids specifically, a header element will be nested within it as well as the navgiation. 
+  Citation: https://www.w3schools.com/tags/tag_body.asp#:~:text=The%20tag%20defines%20the,element%20in%20an%20HTML%20document. 
+  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header 
+-->
+<body>
+  <header>
+    <!-- The heading element is used to create a title to draw the user to the top of the page where the navigation will be placed to the other webpages. 
+      Nested within the first header element called Math Club (purpose of assignment is to create a math club website) is the span element, this is used inline container for phrasing content. 
+      In this case, the class attribute is used to set the design of the h1 title, this being setting all letters to uppercase. 
+      The general structure for this navigation section was obtained via the assignment outline suggestion, link to the github is below. 
+      Because of the way in which the miss.css file works, I will enclose most of the body in the header to apply styling, and this will be consistent throughout all 6 html files for this assignment. 
+      Citation: https://www.w3schools.com/html/html_headings.asp
+      https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span
+      https://github.com/ebajcar/web10199/blob/master/content_summer2023/worksheets/material/template_s2023.html 
+      https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class
+    -->
+    <h1><span class="allcaps">Math Club</span></h1>
+    <!-- The nav tag is being used to set the navigation to other links and webpages, the below are all the required webpages for the Math Club website. 
+      a element is used used to define a hyperlink to another page. 
+      href attribute is used to specify a URL that the link goes to, in this case this will reference all the files on my local computer that contain the HTML for the other webpages. 
+      As per the structure of an a element, the title that will be displayed on the webpage is also set along with the path to the webpage's information. 
+      The Class current is used to highlight the title of the page that the person is on, this format for the navigation bar follows the exact same logic throughout the other html scripts.
+      Citation: https://www.w3schools.com/tags/tag_nav.asp
+      https://www.w3schools.com/tags/tag_a.asp
+      https://www.w3schools.com/tags/att_a_href.asp 
+    -->
+    <nav>
+      <p class="tool-bar"><a href="index.html" class="current">Home</a>
+        <a href="../mathClub/content/add2nums.html">Add 2 Numbers</a>
+        <a href="../mathClub/content/guessNum.html">Guess Number Game</a>
+        <a href="../mathClub/content/covertTem.html">Temperature Conversion</a>
+        <a href="../mathClub/content/calcRoots.html">Quadratic Equation Solver</a>
+        <a href="../mathClub/content/calcAreaCirlce.html">Area of a Circle Calculation</a>
+        <a href="../mathClub/content/calFibonacci.html">Fibonacci Equation</a>
+    </nav>
+  </header>
+  <!-- The main element contains the content of the body of a document, this is normally in reference to the central topic of the document as well as its logic, therefore, it would also be considered the central functionality of the application.
+    In this webpage, there is not much content other than filler as this is meant to be as the main page to show up when the website is launched and used as a navigational point to the other content important sections. 
+    Citation: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
+  -->
+  <main>
+    <!-- h2 element was used in this case to make the heading smaller for this section compared to the main "Math Club" heading. 
+       p element is used to denote a paragraph and will automatically add a single blank line before and after each <p> element. 
+      Citation: https://www.w3schools.com/tags/tag_hn.asp 
+      https://www.w3schools.com/tags/tag_p.asp
+    -->
+    <h2>Welcome! </h2>
+    <p>Follow the links at the top of the page for useful tools and fun games!</p>
+  </main>
+  <!-- The footer element is used to contain the authorship information, copyright information, contact info etc.
+    The original code and the reference to the git was done above, the below footer was created and used from that code.
+    The address element is used to show that the information within it provides contact information the organization. 
+    the &copy is used to create a copyright sign. 
+    Citation: https://www.w3schools.com/tags/tag_footer.asp
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address 
+    https://www.w3schools.com/html/html_symbols.asp
+  -->
+  <footer>
+    <address>SYST10199 Web Development &copy; Sheridan College</address>
+    <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+  </footer>
+</body>
+</html>

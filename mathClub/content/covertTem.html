@@ -1,0 +1,84 @@
+<!--
+File name: convert.html
+Author: Julian Menegon
+Program: Software Development and Network Engineering
+Date: 06/26/2
+Version: 	1.0
+Description: This webpage is used to attain input and present output for the convert temprature webpage of the Math Club website.
+Citation: 
+    https://www.freecodecamp.org/news/basic-html5-template-boilerplate-code-example/ 
+    This page follows basic HTML structure and functionality.
+    For full understanding and citation on why the HTML document is structured as below, refer back to the index.html of this folder. Repeat comments will be avoided. 
+    Only those features that differ from the index.html file will be commented on in this file. For example, the head, and header elements containing nav etc., are the exact same for each page and therefore will not be commented on throughout. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>Temprature Converter</title>   
+      <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+      <link rel="stylesheet" href="../css/main.css"> 
+      <!-- more information see https://missing.style/ -->
+      </head>
+<body>
+  <header>
+    <h1>Temprature Converter</h1>
+    <nav>
+      <p class="tool-bar">
+        <a href="../index.html">Home</a>
+        <a href="../content/add2nums.html">Add 2 Numbers</a>
+        <a href="../content/guessNum.html">Guess Number Game</a>
+        <a href="../content/covertTem.html" class="current">Temperature Conversion</a>
+        <a href="../content/calcRoots.html">Quadratic Equation Solver</a>
+        <a href="../content/calcAreaCirlce.html">Area of a Circle Calculation</a>
+        <a href="../content/calFibonacci.html">Fibonacci Equation</a>
+      </p>
+    </nav>
+  </header>
+  <main>
+    <h3>Enter either value to calculate the other.</h3>
+    <!-- The unordered list element is used here to define an unordered list, due to the way in which the missing.css file manipulates these ordered and unordered lists, I used this element to contain the input for the conversion. 
+      An unordered list was also used so that the two input boxes could be consistently edited and related to one another on the HTML page. 
+      The first line of the code sets the role of the ul and the class attribute assigns the CSS classes, f-switch and dense to the style of the list. 
+      F-switch applies a Flexbox container that will swtich from row to column when the width of the individual descendant exceeds the width variable. 
+      Dense is used to set the spacing between the elements. 
+      The logic of the ul is followed and headings as well sa a li element are called on to form the input fields. 
+      Citation: https://missing.style/docs/components/#section-permalinks
+      https://www.w3schools.com/html/html_lists_unordered.asp 
+      https://missing.style/docs/flex/
+      https://missing.style/docs/utils/#.dense
+    -->
+    <ul class="f-switch dense">
+      <li class="box">
+        <!-- Setting the header to Fhrenheit so the user knows where to enter which vlues, it is set to a number type to expect a number input and given and id for JS to reference and set to 0 in the fieldbox.
+        Span element is used for asthetic purposes as outlined by the missing.style sheet used throughout the document. 
+          Citation: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span 
+          https://missing.style/docs/utils/#--density
+       -->
+        <h2><label>Fahrenheit <input type="number" id="fdegree" value="0"></label></h2>
+        <p class="big-value"><span id="fahren">-</span>°F</p>
+      </li>
+      <li class="box">
+        <!-- Same process noted before for F redone for C-->
+        <h2><label>Celsius <input type="number" id="cdegree" value="0"></label></h2>
+        <p class="big-value"><span id="cels">-</span>°C</p>
+      </li>
+    </ul>
+  </main>
+
+  <script src="../js/convertTem.js"></script>
+<!-- The footer element is used to contain the authorship information, copyright information, contact info etc.
+    The original code and the reference to the git was done above, the below footer was created and used from that code.
+    The address element is used to show that the information within it provides contact information the organization. 
+    the &copy is used to create a copyright sign. 
+    Citation: https://www.w3schools.com/tags/tag_footer.asp
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address 
+    https://www.w3schools.com/html/html_symbols.asp
+  -->
+  <footer>
+    <address>SYST10199 Web Development &copy; Sheridan College</address>
+    <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+  </footer>
+</body>
+</html>
